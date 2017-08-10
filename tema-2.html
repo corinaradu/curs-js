@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container"></div>
+    <script type="text/javascript">
+        
+
+       
+        var phrase = 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua';   
+        // a)
+        console.log(phrase.length);
+
+        // b)
+        var withoutSpaces = phrase.replace(/ /g,"");
+        // console.log(withoutSpaces);
+        console.log(withoutSpaces.length);
+
+        // c)
+        var firstWord = phrase.substring(0, phrase.indexOf(' '));
+        console.log(firstWord.toUpperCase());
+       
+        // d)
+        var wordReplacedPhrase = phrase.replace(firstWord, "word");
+        console.log(wordReplacedPhrase);
+        // var MinusFirstWord = phrase.substring(phrase.indexOf(' '));
+        // console.log('word' + MinusFirstWord);
+
+        // e)
+        var lastWord = phrase.substr(phrase.lastIndexOf(" ")).trim();
+        console.log(lastWord);
+       
+        // f)
+        var posFirstSpace = phrase.indexOf(' ');
+        var posSecondSpace = phrase.indexOf(' ', posFirstSpace + 1);
+        var minusSecondWord = phrase.substring(posSecondSpace + 1);        
+        console.log(firstWord + " " + minusSecondWord);
+
+</script>
+
+</body>
+</html>
