@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Document</title>
+</head>
+<body>
+    <div id="container"></div>
+	<script>
+        function show(message)
+        {
+            document.getElementById('container').innerHTML = document.getElementById('container').innerHTML + '<br>' + message;
+        }
+
+        var phrase = 'Lorem ipsum dolor sit amet consectetur';
+        var nrVocale = 0;
+        var nrConsoane = 0;
+        var nrSpatii = 0;
+        var phraseLength = phrase.length;
+        for (var i = 0; i < phraseLength; i++) {
+            if (phrase[i] == "a" || phrase[i] == "e" || phrase[i] == "i" || phrase[i] == "o" || phrase[i] == "u") {
+                nrVocale += 1;
+            }
+            else if (phrase[i] == " "){
+                nrSpatii += 1;
+            }
+            else  {
+                nrConsoane += 1;
+            }
+        }
+        show("Vocale: " + nrVocale);
+        show("Consoane: " + nrConsoane);
+        show("Spatii: " + nrSpatii);
+
+	</script>
+</body>
+</html>

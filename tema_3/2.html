@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Document</title>
+</head>
+<body>
+    <div id="container"></div>
+	<script>
+        function show(message)
+        {
+            document.getElementById('container').innerHTML = document.getElementById('container').innerHTML + '<br>' + message;
+        }
+
+        var text = '011100001';
+        var nrZero = 0;
+        var nrUnu = 0;
+        var textLength = text.length;
+        for (var i = 0; i < textLength; i++) {
+            if (text[i] === "0") {
+                nrZero += 1;
+            }
+            else  {
+                nrUnu += 1;
+            }
+        }
+        show("Zero: " + nrZero);
+        show("Unu: " + nrUnu);
+	</script>
+</body>
+</html>
