@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tema 1</title>
+</head>
+<body>
+    <div id="container"></div>
+	<script>
+        function show(word) {
+            var message;
+            if (isPalindrom(word)) {
+                message = word + " este palindrom";
+            } else {
+                message = "<strike>" + word + "</strike>";
+            }
+            document.getElementById('container').innerHTML = document.getElementById('container').innerHTML + '<br>' + message;
+        }
+
+
+
+        function isPalindrom(word) {
+            var length = word.length;
+            var halfWord = Math.floor(length / 2);
+
+            for (var i = 0; i < halfWord; i++) {
+                if (word[i] !== word[length - 1 - i]) {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        show('caiac');
+        show('colac');
+        show('abba');
+
+	</script>
+</body>
+</html>

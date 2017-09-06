@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tema 1</title>
+</head>
+<body>
+    <div id="container"></div>
+	<script>
+        function show(word) {
+            var message = encode(word);
+
+            document.getElementById('container').innerHTML = document.getElementById('container').innerHTML + '<br>' + message;
+        }
+
+
+        function encode(word) {
+            var letterCode;
+            var letter;
+            var newWord = '';
+
+            for (var i = 0; i < word.length; i++) {
+                letterCode = word.charCodeAt(i);
+                letter = String.fromCharCode(letterCode + 1);
+                newWord += letter;
+            }
+
+            return newWord;
+        }
+
+
+        show('abcd');
+        show('corina');
+
+
+	</script>
+</body>
+</html>
