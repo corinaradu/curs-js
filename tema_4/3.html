@@ -12,24 +12,44 @@
             document.getElementById('container').innerHTML = document.getElementById('container').innerHTML + '<br>' + message;
         }
 
+        function isCapitalLetter(letter)
+        {
+            if (letter === letter.toUpperCase()) {
+                return true;
+            }
+
+            return false;
+        }
 
         function encode(word) {
             var letterCode;
             var letter;
             var newWord = '';
+            var firstCapitalLetter = 65;
+            var firstLowerLetter = 97;
+            var totalLetters = 26;
 
             for (var i = 0; i < word.length; i++) {
+                letter = word[i];
                 letterCode = word.charCodeAt(i);
-                letter = String.fromCharCode(letterCode + 1);
-                newWord += letter;
+                newLetterCode = letterCode + 1;
+
+                if (isCapitalLetter(letter)) {
+                    newLetterCode = ((newLetterCode - firstCapitalLetter) % totalLetters) + firstCapitalLetter;
+                } else {
+                    newLetterCode = ((newLetterCode - firstLowerLetter) % totalLetters) + firstLowerLetter;
+                }
+
+                newLetter = String.fromCharCode(newLetterCode);
+                newWord += newLetter;
             }
 
             return newWord;
         }
 
 
-        show('abcd');
-        show('corina');
+        show('abcz');
+        show('CorinaZ');
 
 
 	</script>
