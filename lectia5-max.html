@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Template</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+    <p>50 de cifre random. Produsul a 4 dintre acestea (consecutive) sa fie maxim</p>
+    <div id="container"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        function show(message)
+        {
+            $('#container').html($('#container').html() + '<br>' + message);
+        }
+
+        var text = '43546788908654322445674354678890865432244567454545';
+
+        var index = 0;
+        var maxProdus = text[0] * text[1] * text[2] * text[3];
+        var produs;
+        for (var i = 1; i < text.lenght - 3; i++) {
+            produs = text[i] * text[i + 1] * text[i + 2] * text[i + 3];
+
+            if (maxProdus < produs) {
+                maxProdus = produs;
+                index = i;
+            }
+        }
+        show (maxProdus);
+        show (index);
+    </script>
+</body>
+</html>
