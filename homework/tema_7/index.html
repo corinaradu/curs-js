@@ -32,6 +32,8 @@
 
 
         phrase = phrase.trim();
+
+        // 1.----------------------------------------------------------------------------
         function getNumberOfSpaces(phrase)
         {
             var phraseWithoutSpaces = phrase.replace(/ /g, '');
@@ -46,6 +48,12 @@
         show('1. Numarul cuvintelor: ' + nrWord);
 
 
+        // 2.----------------------------------------------------------------------------
+        function endSentence(char)
+        {
+            return char === '.' || char === '!' || char === '?' || char === ';';
+        }
+
         var nrSentences = 0;
 
         for (var i = 0; i < phrase.length; i++) {
@@ -59,6 +67,7 @@
         show('2. Numarul propozitiilor: ' + (nrSentences + 1));
 
 
+        // 3.----------------------------------------------------------------------------
         function isCapitalLetter(char)
         {
             return char == char.toUpperCase() && char != char.toLowerCase();
@@ -72,12 +81,6 @@
         }
 
         show('3. Numarul cuvintelor care incep cu litera mare: ' + nrCapitalLetter);
-
-
-        function endSentence(char)
-        {
-            return char === '.' || char === '!' || char === '?' || char === ';';
-        }
 
     </script>
 </body>
