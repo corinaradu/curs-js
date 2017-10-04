@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Template</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+
+                <p>Declarati si initializati o variabila care sa contina urmatorul text:</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit! Pellentesque condimentum massa vitae Tempor rutrum. Etiam porttitor blandit nibh et porta... "Aenean suscipit ut diam vel dapibus?" Integer eu erat a lorem vehicula vestibulum!? Nunc ullamcorper arcu sit amet libero faucibus, id Consectetur velit tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus; Mauris purus leo, interdum a suscipit et, ultrices sit amet felis.</p>
+                <p>Scrieti un script care sa numere **cate cuvinte**, **cate propozitii** si cate **cuvinte care incep cu litera mare** contine textul.</p>
+                <div id="container"></div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        function show(message)
+        {
+            $('#container').html($('#container').html() + '<br>' + message);
+        }
+
+
+
+        var phrase = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit! Pellentesque condimentum massa vitae Tempor rutrum. Etiam porttitor blandit nibh et porta... "Aenean suscipit ut diam vel dapibus?" Integer eu erat a lorem vehicula vestibulum!? Nunc ullamcorper arcu sit amet libero faucibus, id Consectetur velit tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus; Mauris purus leo, interdum a suscipit et, ultrices sit amet felis.';
+
+
+        phrase = phrase.trim();
+        function getNumberOfSpaces(phrase)
+        {
+            var phraseWithoutSpaces = phrase.replace(/ /g, '');
+
+            return phrase.length - phraseWithoutSpaces.length
+        }
+
+
+        var noOfSpaces = getNumberOfSpaces(phrase);
+        var NrWord = noOfSpaces + 1;
+
+        show('1. Numarul cuvintelor: ' + NrWord);
+
+        var NrCapitalLetter = 0;
+        for (i = 0; i < phrase.length; i++ ){
+            if (pharse(i) == pharse(i).toUpperCase()) {
+                NrCapitalLetter++;
+            }
+        }
+
+    </script>
+</body>
+</html>

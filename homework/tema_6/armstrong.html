@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Template</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</head>
+<body>
+    <p>Scrieti un script care sa calculeze toate numerele **Armstrong** mai mici decat 500 (nu exista asftel de numere mai mari decat 500). Un numar Armstrong este numarul care este egal cu suma cuburilor cifrelor sale.</p>
+    <div id="container"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        function show(message)
+        {
+            $('#container').html($('#container').html() + '<br>' + message);
+        }
+
+        function isArmstrong(n) {
+            var str = n.toString();
+            var suma = 0;
+
+
+            for (var i = 0; i < str.length; i++) {
+                suma = suma + parseInt(str[i]) ** 3;
+            }
+
+            if (suma === n) {
+                return true;
+            }
+
+            return false;
+        }
+
+        for (var i = 2; i <= 500; i++) {
+            if (isArmstrong(i)) {
+                show(i);
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>
