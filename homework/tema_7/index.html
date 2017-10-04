@@ -41,15 +41,42 @@
 
 
         var noOfSpaces = getNumberOfSpaces(phrase);
-        var NrWord = noOfSpaces + 1;
+        var nrWord = noOfSpaces + 1;
 
-        show('1. Numarul cuvintelor: ' + NrWord);
+        show('1. Numarul cuvintelor: ' + nrWord);
 
-        var NrCapitalLetter = 0;
-        for (i = 0; i < phrase.length; i++ ){
-            if (pharse(i) == pharse(i).toUpperCase()) {
-                NrCapitalLetter++;
+
+        var nrSentences = 0;
+
+        for (var i = 0; i < phrase.length; i++) {
+            if (endSentence(phrase[i]) && phrase[i + 1] == ' ') {
+
+                nrSentences++;
             }
+
+        }
+
+        show('2. Numarul propozitiilor: ' + (nrSentences + 1));
+
+
+        function isCapitalLetter(char)
+        {
+            return char == char.toUpperCase() && char != char.toLowerCase();
+        }
+
+        var nrCapitalLetter = 0;
+        for (var i = 0; i < phrase.length; i++){
+            if (isCapitalLetter(phrase[i])) {
+                nrCapitalLetter++;
+            }
+        }
+
+        show('3. Numarul cuvintelor care incep cu litera mare: ' + nrCapitalLetter);
+
+
+        function endSentence(char)
+        {
+            return char === '.' || char === '!' || char === '?' || char === ';';
         }
 
     </script>
