@@ -75,7 +75,7 @@
 
         var nrCapitalLetter = 0;
         for (var i = 0; i < phrase.length; i++){
-            if (isCapitalLetter(phrase[i])) {
+            if (isCapitalLetter(phrase[i]) && phrase[i - 1] == ' ') {
                 nrCapitalLetter++;
             }
         }
