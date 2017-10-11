@@ -24,6 +24,33 @@
             $('#container').html($('#container').html() + '<br>' + message);
         }
 
+        function addSufix(number) {
+
+            if (number <= 0) {
+                alert('numarul e invalid');
+
+                return false;
+            }
+
+            var numStr = number.toString();
+            var lastDigit = numStr.substr(numStr.length - 1);
+
+            if (lastDigit === '1') {
+                numStr += 'st';
+            } else if (lastDigit === '2') {
+                numStr += 'nd';
+            } else if (lastDigit === '3') {
+                numStr += 'rd';
+            } else {
+                numStr += 'th';
+            }
+
+            return numStr;
+        }
+
+
+        var n = prompt('Introdu un numar:');
+        show(addSufix(n));
 
     </script>
 </body>
