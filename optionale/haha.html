@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Template</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <h1>Title</h1>
+                <p>Scrieti o functie care concateneaza un string de n ori. Folositi `for` si concatenare de string-uri.</p>
+                <div id="container"></div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        function show(message)
+        {
+            $('#container').html($('#container').html() + '<br>' + message);
+        }
+
+        function repeat(text, number) {
+            var newText = "";
+
+            for (var i = 0; i < number; i++) {
+                newText += text;
+            }
+
+            return newText;
+        }
+
+        show(repeat('ha', 3));
+
+    </script>
+</body>
+</html>

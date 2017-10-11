@@ -49,19 +49,31 @@
 
 
         // 2.----------------------------------------------------------------------------
-        function endSentence(char)
+        function endSentence(prevChar, char, nextChar)
         {
-            return char === '.' || char === '!' || char === '?' || char === ';';
+            console.log(prevChar + ' - ' + char + ' - ' + nextChar);
+            return
+                //prevChar !== '.'
+                //&& (
+                    char === '.'
+                    || char === '!'
+                    || char === '?'
+                    || char === ';'
+                //)
+                //&& nextChar === ' '
+            ;
         }
 
         var nrSentences = 0;
-
+        var sentence = '';
         for (var i = 0; i < phrase.length; i++) {
-            if (endSentence(phrase[i]) && phrase[i + 1] == ' ') {
-
+            if (endSentence(phrase[i - 1], phrase[i], phrase[i + 1])) {
+                console.log(sentence);
+                sentence = '';
                 nrSentences++;
             }
 
+            sentence += phrase[i];
         }
 
         show('2. Numarul propozitiilor: ' + (nrSentences + 1));

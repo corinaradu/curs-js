@@ -19,13 +19,16 @@
 
         var phrase = 'Robin Singh from USA.';
         var FinalPhrase = '';
+
         for (var i = 0; i < phrase.length; ++i) {
             char = phrase[i];
-        if (char == char.toUpperCase()) {
-            FinalPhrase += char.toLowerCase();
-        } else if (char == char.toLowerCase()) {
-            FinalPhrase += char.toUpperCase();
-        }
+
+            if (char == char.toUpperCase()) {
+                FinalPhrase += char.toLowerCase();
+            } else if (char == char.toLowerCase()) {
+                FinalPhrase += char.toUpperCase();
+            }
+
         }
         show(FinalPhrase);
     </script>
