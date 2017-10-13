@@ -7,7 +7,7 @@
 
 </head>
 <body>
-    <p>Scrieti o functie JS care sa inverseze un numar.</p>
+    <p>While</p>
     <div id="container"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
@@ -16,30 +16,15 @@
             $('#container').html($('#container').html() + '<br>' + message);
         }
 
-        var text = '1234';
-        function Inversare(text) {
-            var length = text.length;
-            var result = '';
-
-            for (var i = 0; i < length; i++) {
-                result += text[length - 1 - i];
-            }
-
-            return result;
+        // for (i = 0; i <= 10; i++) {
+        //     show(i);
+        // }
+        i = 1;
+        while (i <= 5) {
+            show(i);
+            i++;
         }
-
-        show(Inversare('1234'));
-        show(Inversare('javascript'));
-
-
-// var a ='123';
-// var sum = 0;
-// a = a.toString();
-// for (var i = 0; i < a.lenght; i++) {
-//     sum += parseInt (a[i]);
-// }
-// show(a);
-
+        
     </script>
 </body>
 </html>
