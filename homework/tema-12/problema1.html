@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Template</title>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h1>Tema 12</h1>
+                <p>Declarati o variabila si initializati-o cu un array gol.</p>
+                <div id="container"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        function show(message)
+        {
+            $('#container').html($('#container').html() + '<br>' + message);
+        }
+
+        
+        var colors = [];
+        colors.push( 'red');
+        colors.push( 'blue');
+        colors.push( 'yellow');
+        colors.push( 'green');
+        colors.push( 'cyan');
+
+        
+        
+        
+        console.log(colors);
+        console.table(colors);
+        console.log(sortedColors);
+        
+        var sortedColors = colors.sort();
+console.log(sortedColors);
+
+var greenPosition = colors.indexOf('green');
+console.log('poziltia lui green este: ' + greenPosition);
+
+var colorsLength = colors.length;
+for (var i = 0; i < colorsLength; i++) {
+    console.log('Penultimul element este: ' + colors[colorsLength-2]);
+}
+
+var unitedColors = colors.join('#');
+console.log(unitedColors);
+
+colors.pop();
+console.log(colors);
+
+    </script>
+</body>
+</html>
