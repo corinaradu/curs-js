@@ -22,37 +22,41 @@
             $('#container').html($('#container').html() + '<br>' + message);
         }
 
-        
+        // a. Folosind functia .push, adaugati pe rand in array elementele: 'red', 'blue', 'yellow', 'green', 'cyan'.
         var colors = [];
-        colors.push( 'red');
-        colors.push( 'blue');
-        colors.push( 'yellow');
-        colors.push( 'green');
-        colors.push( 'cyan');
+        colors.push('red');
+        colors.push('blue');
+        colors.push('yellow');
+        colors.push('green');
+        colors.push('cyan');
 
-        
-        
         
         console.log(colors);
+
+        // b. Afisati in consola valoarea array-ului sub forma unui tabel (vezi console.table()).
         console.table(colors);
-        console.log(sortedColors);
         
-        var sortedColors = colors.sort();
-console.log(sortedColors);
+        // c. Sortati crescator elementele din array si afisati pozitia elementului cu valoarea 'green' din noul array.
+        // var sortedColors = colors.sort();
+        // console.log(sortedColors);
+        colors.sort();
+        console.log(colors);
 
-var greenPosition = colors.indexOf('green');
-console.log('poziltia lui green este: ' + greenPosition);
+        var greenPosition = colors.indexOf('green');
+        console.log('Poziltia lui green este: ' + greenPosition);
 
-var colorsLength = colors.length;
-for (var i = 0; i < colorsLength; i++) {
-    console.log('Penultimul element este: ' + colors[colorsLength-2]);
-}
+        // d. Afisati penultimul element din array.
+        var colorsLength = colors.length;
+        console.log('Penultimul element este: ' + colors[colorsLength-2]);
+        
+        // e. Stergeti ultimul element din array.
+        colors.pop();
+        console.log(colors);
+        
+        // f. Afisati stringul format din concatenarea tuturor elementelor din array separate prin '#'.
+        var unitedColors = colors.join('#');
+        console.log(unitedColors);
 
-var unitedColors = colors.join('#');
-console.log(unitedColors);
-
-colors.pop();
-console.log(colors);
 
     </script>
 </body>
