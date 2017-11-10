@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Template</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <h1>Lorem Ipsum is simply dummy text of the printing and typesetting</h1>
+                <p>Afisati numarul de caractere diferite de spatiu din string.</p>
+                <p>Afisati cu litere mari primul cuvant din string.</p>
+                <p>Inlocuiti primul cuvant cu stringul `word`.</p>
+                <p>Afisati ultimul cuvant din string.</p>
+                <p>Stergeti al doilea cuvant din string.</p>
+                <div id="container"></div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        function show(message)
+        {
+            $('#container').html($('#container').html() + '<br>' + message);
+        }
+
+var text = 'Lorem Ipsum is simply dummy text of the printing and typesetting';
+var textLength = text.length;
+
+var firstWord = text.substr(0, text.indexOf(' '));
+var lastWord = text.substr(text.lastIndexOf(' '));
+ var posFirstSpace = text.indexOf(' ');
+ var posSecondSpace = text.indexOf(' ', posFirstSpace + 1);
+var secondWord = text.substring(posFirstSpace + 1, posSecondSpace)
+
+var textDoi = text.replace(firstWord, 'word');
+        var nrChar = 0;
+        for (var i = 0; i < textLength; i++)
+                if (text[i] !== ' ') {
+                    nrChar++;
+                }
+
+        show(textLength);
+        show(nrChar);
+        show(firstWord.toUpperCase());
+        show(textDoi);
+        show(lastWord);
+        show(posSecondSpace);
+        show(secondWord);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Template</title>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h1>Problema 2</h1>
+                <p>Scrieti o functie care primeste ca parametru un array format doar din numere intregi si care returneaza suma patratelor acestor numere.</p>
+                <div id="container"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        function show(message)
+        {
+            $('#container').html($('#container').html() + '<br>' + message);
+        }
+
+function sumPatrate(nums)
+{
+  return nums[0] + nums[1] + nums[2];
+}
+
+console.log(sumPatrate([10, 32, 20]));
+console.log(sumPatrate([5, 7, 9]));
+console.log(sumPatrate([0, 8, -11]));
+</script>
+
+
+
+    <script src="scripts.js"></script>
+</body>
+</html>
