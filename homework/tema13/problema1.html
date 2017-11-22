@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Template</title>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h1>Tema 13</h1>
+                <p>Scrieti un script care parcurge un array format doar din numere intregi pozitive si care inlocuieste fiecare element par cu dublul lui si fiecare element impar cu patratul lui.</p>
+                <div id="container"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        function show(message)
+        {
+            $('#container').html($('#container').html() + '<br>' + message);
+        }
+
+        function changeElements(numbers) {
+            
+
+            for (var i = 0; i < numbers.length; i++) {
+                if (numbers[i] % 2 == 0) {
+                    numbers[i] = numbers[i] * 2;
+                } else {
+                    numbers[i] = numbers[i] ** 2;
+                }
+            }
+
+            return numbers;
+        }
+        
+        console.log(changeElements([8, 5, 6, 7])); 
+
+
+    </script>
+</body>
+</html>

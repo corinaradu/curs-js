@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Template</title>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h1>Tema 13</h1>
+                <p>Scrieti un script care sa stearga toate dublurile dintr-un array. In cazul elementelor de tip string compararea se va face case insensitive.
+                    > Tips:
+                    > - parcurgeti array-ul si convertiti in lower case toate cuvintele
+                    > - sortati array-ul crescator
+                    > - parcurgeti array-ul si verificati daca elementul curent este la fel cu elementul urmator
+                    > - stergeti elementul urmator si decrementati cu o unitate variabila in care ati pus la inceput lungimea array-ului pentru a scurta numarul de iteratii facute de `for`-ul care parcurge array-ul</p>
+                <div id="container"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        function show(message)
+        {
+            $('#container').html($('#container').html() + '<br>' + message);
+        }
+
+        
+      
+        // function removeDuplicates(elements) 
+        // {
+        //     var sortedElements = [];
+        //     var uniqueElements = [];
+        //     for (var i = 0; i < elements.length; i++) {
+        //         sortedElements.push(elements[i].toLowerCase());
+        //     }
+            
+        //     sortedElements.sort();
+        //     uniqueElements.push(sortedElements[0]);
+        //     for (var i = 1; i < sortedElements.length; i++) {
+        //         if (sortedElements[i] !== sortedElements[i - 1]) {
+        //             uniqueElements.push(sortedElements[i]); 
+        //         }
+        //     }
+
+        //     return uniqueElements;
+        // }
+
+        // function removeDuplicates(elements) 
+        // {
+        //     var sortedElements = [];
+        //     for (var i = 0; i < elements.length; i++) {
+        //         sortedElements.push(elements[i].toLowerCase());
+        //     }
+            
+        //     sortedElements.sort();
+
+        //     for (var i = 0; i < sortedElements.length; i++) {
+        //         if (i > 0 && sortedElements[i] == sortedElements[i - 1]) {
+        //             sortedElements.splice(i, 1);
+        //             i--;
+        //         }
+        //     }
+
+        //     return sortedElements;
+        // }
+
+        function removeDuplicates(elements) 
+        {
+            var lowerElements = [];
+            var uniqueElements = [];
+            for (var i = 0; i < elements.length; i++) {
+                lowerElements.push(elements[i].toLowerCase());
+            }
+            
+            for (var i = 0; i < lowerElements.length; i++) {
+                if (uniqueElements.indexOf(lowerElements[i]) == -1) {
+                    uniqueElements.push(lowerElements[i]);
+                }
+            }
+
+            return uniqueElements;
+        }
+        
+        
+
+        
+
+        console.log(removeDuplicates(['123', 'dr', '123', 'abc', 'DR']));
+    </script>
+</body>
+</html>
