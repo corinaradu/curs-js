@@ -27,34 +27,34 @@
             $('#container').html($('#container').html() + '<br>' + message);
         }
 
-        
-      
-        // function removeDuplicates(elements) 
+
+
+        function removeDuplicates(elements)
+        {
+            var sortedElements = [];
+            var uniqueElements = [];
+            for (var i = 0; i < elements.length; i++) {
+                sortedElements.push(elements[i].toLowerCase());
+            }
+
+            sortedElements.sort();
+            uniqueElements.push(sortedElements[0]);
+            for (var i = 1; i < sortedElements.length; i++) {
+                if (sortedElements[i] !== sortedElements[i - 1]) {
+                    uniqueElements.push(sortedElements[i]);
+                }
+            }
+
+            return uniqueElements;
+        }
+
+        // function removeDuplicates(elements)
         // {
         //     var sortedElements = [];
-        //     var uniqueElements = [];
         //     for (var i = 0; i < elements.length; i++) {
         //         sortedElements.push(elements[i].toLowerCase());
         //     }
-            
-        //     sortedElements.sort();
-        //     uniqueElements.push(sortedElements[0]);
-        //     for (var i = 1; i < sortedElements.length; i++) {
-        //         if (sortedElements[i] !== sortedElements[i - 1]) {
-        //             uniqueElements.push(sortedElements[i]); 
-        //         }
-        //     }
 
-        //     return uniqueElements;
-        // }
-
-        // function removeDuplicates(elements) 
-        // {
-        //     var sortedElements = [];
-        //     for (var i = 0; i < elements.length; i++) {
-        //         sortedElements.push(elements[i].toLowerCase());
-        //     }
-            
         //     sortedElements.sort();
 
         //     for (var i = 0; i < sortedElements.length; i++) {
@@ -67,26 +67,26 @@
         //     return sortedElements;
         // }
 
-        function removeDuplicates(elements) 
-        {
-            var lowerElements = [];
-            var uniqueElements = [];
-            for (var i = 0; i < elements.length; i++) {
-                lowerElements.push(elements[i].toLowerCase());
-            }
-            
-            for (var i = 0; i < lowerElements.length; i++) {
-                if (uniqueElements.indexOf(lowerElements[i]) == -1) {
-                    uniqueElements.push(lowerElements[i]);
-                }
-            }
+        // function removeDuplicates(elements)
+        // {
+        //     var lowerElements = [];
+        //     var uniqueElements = [];
+        //     for (var i = 0; i < elements.length; i++) {
+        //         lowerElements.push(elements[i].toLowerCase());
+        //     }
 
-            return uniqueElements;
-        }
-        
-        
+        //     for (var i = 0; i < lowerElements.length; i++) {
+        //         if (uniqueElements.indexOf(lowerElements[i]) == -1) {
+        //             uniqueElements.push(lowerElements[i]);
+        //         }
+        //     }
 
-        
+        //     return uniqueElements;
+        // }
+
+
+
+
 
         console.log(removeDuplicates(['123', 'dr', '123', 'abc', 'DR']));
     </script>
